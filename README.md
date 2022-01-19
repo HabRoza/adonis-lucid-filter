@@ -159,6 +159,7 @@ export default class UserFilter extends BaseModelFilter {
 
   // This will filter 'companyId', 'company_id' OR 'company'
   company(id: number) {
+  
     this.$query.where('company_id', id)
   }
 
@@ -215,7 +216,7 @@ export default class UserFilter extends BaseModelFilter {
   // Doing this would allow you to have a mobile_phone() filter method instead of mobilePhone().
   // By default, mobilePhone() filter method can be called thanks to one of the following input key:
   // mobile_phone, mobilePhone, mobile_phone_id, mobilePhoneId
-  public static camelCase: boolean = true
+  public static camelCase: boolean = false
 }
 ```
 
